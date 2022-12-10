@@ -8,3 +8,23 @@ function trocaModulo2 () {
         document.getElementById("substituir").innerHTML = titulo;
     }
 </html>
+
+Esse código exibe valor de uma variável na tela
+
+<p id="substituir"></p>
+<script>
+   var modulo1 = "<b><h2>You can have objects in an Array.</h2></b><br> You can have functions in an Array. You can have arrays in an Array:";
+   let modulo2 = 
+   [titulo="<b><h2> Titulo <br></h2></b>" + 
+   " Texto 1 " +
+   "Texto 2"];
+
+    function trocaModulo (modulo1, modulo2) {
+        if (modulo1) {
+            document.getElementById("substituir").innerHTML = modulo1;
+        }
+        if (modulo2) {
+            document.getElementById("substituir").innerHTML = modulo2;
+        }
+    }
+</script>
