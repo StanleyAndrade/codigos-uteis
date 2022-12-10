@@ -1,1 +1,9 @@
+Esse método abaixo pega o valor de um input e colocar dentro de uma variável
 
+<input type="text" id="input_titulo" placeholder="Titulo"></input>
+<button onclick="trocaModulo2()" value="salvar">salvar</button>
+
+function trocaModulo2 () {
+        var titulo = document.getElementById("input_titulo").value;
+        document.getElementById("substituir").innerHTML = titulo;
+    }
