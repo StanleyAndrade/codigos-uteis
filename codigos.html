@@ -29,23 +29,39 @@ Esse código exibe valor de uma variável na tela
     }
 </script>
 
-Faz elementor oculto aparecer com um clique
+# Faz elementor oculto aparecer com um clique (através do display none x Block do CSS)
+# Não serve caso queira colocar mais de um botão. Nesse caso, use variáveis.
 
 <html>
-<button id="btn_modulo1" onclick="trocaModulo(modulo1)">Módulo 1</button><br>
-            <button id="btn_modulo2" onclick="trocaModulo(modulo2)">Módulo 2</button><br>
-            <button id="btn_modulo3" onclick="trocaModulo()">Módulo 3</button>
+        <button id="btn_modulo1" onclick="ExibirModulo1('m1')">Módulo 1</button><br>
 </html>
+
 <script>
-     if (modulo1) {
-            var display = document.getElementById('apostila_1').style.display;
+        function ExibirModulo1 (m1) {
+            var display = document.getElementById('modulo1').style.display;
             if (display == "none") {
-                document.getElementById('apostila_1').style.display = 'block';
+                document.getElementById('modulo1').style.display = block;
             } else {
-                document.getElementById('apostila_1').style.display = 'none';
+                document.getElementById('modulo1').style.display = 'inline-block';
             }
-        }
+}
 </script>
+<style>
+main { 
+display:block;
+flex-direction: row; /*coloca imagem e texto lado a lado*/
+margin-top: 50px;
+}
+#modulo1 {
+display: none;
+}
+#modulo2 {
+display: none;
+}
+#modulo3 {
+display: none;
+}
+</style>
 
 # Exibe PDF no corpo do HTML
 <iframe src="https://techsos.com.br/Darf.pdf" width="600" height="780" style="border: none;"></iframe>
