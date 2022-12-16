@@ -71,3 +71,9 @@ display: none;
 
 # Exibir PDF convertido em HTML no corpo HTML. Colocar apostila já convertida em HTML na hospedagem. 
 <embed src="Analise-Técnica-Para-Leigos-Barbara-Rockefeller.html" type='application/pdf' width="960" height="800">
+
+#Método pra salvar apostila dentro de variável e exibila na tela
+function modulo1 () {
+  var varmodulo1 = '<h2>Apostila 1</h2> <embed src="Analise-Técnica-Para-Leigos-Barbara-Rockefeller.html" width="960" height="800">';
+  document.getElementById('substituir').innerHTML = varmodulo1;
+}
