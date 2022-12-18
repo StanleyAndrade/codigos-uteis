@@ -72,8 +72,37 @@ display: none;
 # Exibir PDF convertido em HTML no corpo HTML. Colocar apostila já convertida em HTML na hospedagem. 
 <embed src="Analise-Técnica-Para-Leigos-Barbara-Rockefeller.html" type='application/pdf' width="960" height="800">
 
-#Método pra salvar apostila dentro de variável e exibila na tela
+#método que faz a página atualizar. 
+<script>
+function voltar() {
+    location.reload();
+}
+</script>
+
+# Método pra salvar apostila dentro de variável e exibila na tela
+<script> 
 function modulo1 () {
   var varmodulo1 = '<h2>Apostila 1</h2> <embed src="Analise-Técnica-Para-Leigos-Barbara-Rockefeller.html" width="960" height="800">';
   document.getElementById('substituir').innerHTML = varmodulo1;
 }
+</script>
+
+#Botões "video e apostila" dentro do módulo. Video e apostila dentro de cada botão.
+
+<script>
+function modulo1() {
+    var botao_video = '<button id="btn_modulo2" onclick="botao_video()">Ver Vídeo Aula</button>';
+    var botao_apostila = '<button id="btn_modulo2" onclick="botao_apostila()">Ler apostila</button>'
+    document.getElementById('substituir').innerHTML = botao_video + botao_apostila;
+}
+
+function botao_apostila () {
+    var varmodulo1 = '<h2>Apostila 1</h2> <embed src="Analise-Técnica-Para-Leigos-Barbara-Rockefeller.html" width="960" height="800">';
+    document.getElementById('substituir').innerHTML = varmodulo1;
+}
+
+function botao_video () {
+    var varmodulo1 = '<h2>Video aula 1</h2> <iframe src="https://drive.google.com/file/d/13EDcPdiVS64Gc0fcAXJxfbn9VYELSPBq/preview" width="640" height="480" allow="autoplay"></iframe>';
+    document.getElementById('substituir').innerHTML = varmodulo1;
+}
+</script>
