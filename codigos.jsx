@@ -110,3 +110,22 @@ function botao_video () {
 # Método que faz abrir página na mesma página
 window.open('https://cestsegtrabalho.com.br/index.php/nova-prova-primeiros-socorros/', '_self') 
 
+//COMO FAZER UM MAP() com String dentro
+var maps =  {
+            'tentativaMap': 
+                {
+                    nome: 'stanley',
+                sobrenome: 'Maria'
+                }
+        }
+
+//MAP que concatena
+var arrayNomes = [
+            {nome: 'Maria', sobrenome: 'Souza'}
+        ]
+        function concatenarNomes(elemento){
+            let nome = elemento.nome + " " + elemento.sobrenome;
+            return nome;
+        }
+        var nomeCompleto = arrayNomes.map(concatenarNomes);
+
