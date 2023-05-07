@@ -129,3 +129,7 @@ var arrayNomes = [
         }
         var nomeCompleto = arrayNomes.map(concatenarNomes);
 
+//método que arredonda os números
+console.log(Math.floor(1.3))
+//1
+
