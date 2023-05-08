@@ -159,3 +159,30 @@ function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria) {
 }
 const celular1 = criarCelular('Nokia', 5.5, 5000);
 console.log(celular1)
+
+//FACTORY FUNCTION AND CONSTRUCTOR FUNCTION
+//FACTORY FUNCTION:
+function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria) {
+    return { //const celular foi substituido por return
+        marcaCelular: marcaCelular, 
+        tamanhoTela, //quando chave e valor é igual, deixa um só
+        capacidadeBateria: capacidadeBateria,
+        ligar() { //função fica assim
+            console.log('Fazendo ligação')
+        }
+    }
+}
+const celular1 = criarCelular('Nokia', 5.5, 5000);
+console.log(celular1)
+
+//CONSTRUCTOR FUNCTION
+function Celular(marcaCelular, tamanhoTela, capacidadeBateria){
+    this.marcaCelular = marcaCelular, //this referencia o objeto
+    this.tamanhoTela = tamanhoTela,
+    this.capacidadeBateria = capacidadeBateria,
+    this.ligar = function() { //assim que se cria uma function
+        console.log('Fazendo Ligação...')
+    }
+}
+const celular = new Celular('asus', 5.5, 4000);
+console.log(celular);
