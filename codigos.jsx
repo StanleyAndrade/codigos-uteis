@@ -133,3 +133,29 @@ var arrayNomes = [
 console.log(Math.floor(1.3))
 //1
 
+//FACTORY FUNCTION
+//como é:
+const celular = {
+    marcaCelular: 'Iphone',
+    tamanhoTela: {
+        vertical: 155,
+        horizontal: 75,
+    },
+    capacidadeBateria: 5000,
+    ligar: function() {
+        console.log('Fazendo ligação')
+    }
+}
+//como ficou:
+function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria) {
+    return { //const celular foi substituido por return
+        marcaCelular: marcaCelular, 
+        tamanhoTela, //quando chave e valor é igual, deixa um só
+        capacidadeBateria: capacidadeBateria,
+        ligar() { //função fica assim
+            console.log('Fazendo ligação')
+        }
+    }
+}
+const celular1 = criarCelular('Nokia', 5.5, 5000);
+console.log(celular1)
