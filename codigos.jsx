@@ -186,3 +186,15 @@ function Celular(marcaCelular, tamanhoTela, capacidadeBateria){
 }
 const celular = new Celular('asus', 5.5, 4000);
 console.log(celular);
+
+//NATUREZA DINAMICA DE OBJETOS
+const mouse = { //mouse é o objeto. O que está dentro dele é a propriedade
+    cor: 'vermelho',
+    marca: 10,
+}
+//É possível adicionar propriedades ao objeto fora das chaves, desta foram:
+mouse.velocidade = 5000; 
+mouse.trocarFio = function () {
+    console.log('Mudando pra Bluetooth')
+}
+console.log(mouse);
