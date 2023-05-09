@@ -198,3 +198,21 @@ mouse.trocarFio = function () {
     console.log('Mudando pra Bluetooth')
 }
 console.log(mouse);
+
+//CLONAGEM DE OBJETOS
+const mouse = { //mouse é o objeto. O que está dentro dele é a propriedade
+    cor: 'vermelho',
+    marca: 10,
+}
+
+//FORMA 1
+const novoObjeto = Object.assign({
+    bateria: 546
+}, mouse);
+console.log(novoObjeto);
+
+//FORMA 2
+const objeto2 = {...mouse, 
+bateria: 562,
+};
+console.log(objeto2);
