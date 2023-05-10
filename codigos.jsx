@@ -255,3 +255,8 @@ console.log(combinar2);
 //CLONAR
 const clonar = [...primeiro];
 console.log(clonar);
+
+//colocar ponto 
+const numeros = [1,2,3,4,5];
+const ponto = numeros.join('.');
+console.log(ponto);
