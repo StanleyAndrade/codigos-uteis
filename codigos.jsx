@@ -243,3 +243,15 @@ console.log(array1.find(found1 => found1.nome === 'adidas'));
 
 //forma 5 -Chaves vazias apenas se não tiver parâmetro
 console.log(array1.find(()  => found1.nome === 'adidas'));
+
+//COMBINAR ARRAY
+const primeiro = [1,2,3];
+const segundo = [4,5,6];
+const combinar = primeiro.concat(segundo); //forma 1 concat
+const combinar2 = [...primeiro,...segundo] //forma 2 spread
+console.log(combinar);
+console.log(combinar2);
+
+//CLONAR
+const clonar = [...primeiro];
+console.log(clonar);
