@@ -216,3 +216,30 @@ const objeto2 = {...mouse,
 bateria: 562,
 };
 console.log(objeto2);
+
+//ARROW FUUNCTION / FUNÇÃO DE SETA
+const array1 = [
+    {id: 1, nome: 'adidas'},
+    {id: 2, nome: 'nike'},
+];
+
+//forma 1
+console.log(array1.find(function(found1){
+    return found1.nome === 'adidas';
+}));
+
+//forma 2
+console.log(array1.find((found1) => {
+    return found1.nome === 'adidas';
+}));
+
+//forma 3
+console.log(array1.find(found1 => {
+    return found1.nome === 'adidas';
+}));
+
+//forma 4
+console.log(array1.find(found1 => found1.nome === 'adidas'));
+
+//forma 5 -Chaves vazias apenas se não tiver parâmetro
+console.log(array1.find(()  => found1.nome === 'adidas'));
