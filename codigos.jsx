@@ -260,3 +260,12 @@ console.log(clonar);
 const numeros = [1,2,3,4,5];
 const ponto = numeros.join('.');
 console.log(ponto);
+
+//evento de tempo
+setTimeout(function(){ //Executa depois de esperar
+    console.log('To com fome')
+}, 5000); //milisegundos
+
+setInterval(() => { //Executa depois de esperar
+    console.log('To com fome')
+}, 5000); //milisegundos
