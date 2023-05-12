@@ -301,3 +301,37 @@ const Aula = (tempo) => {
         </div>
     )
 }
+
+//JSON
+    //Objeto
+    var carro = {
+        modelo: 'Fiat',
+        ano: 2001
+    }
+    //converter objeto para texto
+    function objectToText(){    
+        var texto = JSON.stringify(carro);
+        document.getElementById('area').innerHTML = texto;
+    }
+
+    //converte texto para objeto
+    function textToObject(){
+        //var obj = JSON.parse(carro);
+        console.log(carro.modelo)
+    }
+
+    function viaCep(){
+        const ajax = new XMLHttpRequest(); //requisição ao site de forma remota (sem navegador)
+        ajax.open('GET', 'https://viacep.com.br/ws/23520560/json/');
+        ajax.send();
+        ajax.onload = function(){
+            //exibe em formato de textio JSON
+            document.getElementById('area').innerHTML = this.responseText;
+            //Transforma o text em objeto
+            var obj = JSON.parse(this.responseText);
+            //pegou os valores
+            let cidade = obj.localidade;
+            //saída
+            alert(cidade);
+        }
+    }
