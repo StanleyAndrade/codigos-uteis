@@ -269,3 +269,35 @@ setTimeout(function(){ //Executa depois de esperar
 setInterval(() => { //Executa depois de esperar
     console.log('To com fome')
 }, 5000); //milisegundos
+
+//CONOMETRO OU TEMPORIZADOR - Não funciona se a variável receber o valor. Descobrir o porquê
+const Aula = (tempo) => {
+
+    function ativarContagem(){
+         tempo = setInterval(() => {
+           var conometro = document.getElementById('tempo').innerHTML;
+           var soma = parseInt(conometro) + 1;
+           console.log(soma)
+           document.getElementById('tempo').innerHTML = soma;
+           if (soma === 0) {
+            document.getElementById('tempo').innerHTML = 0;
+           }{
+
+           }
+           
+       }, 1000);
+   };
+
+   function pararContagem(){
+    clearInterval(tempo);
+   };
+
+    return(
+        <div>
+            <h3>Conometro</h3>
+            <h5 id="tempo">00</h5>
+            <button onClick={ativarContagem}>Começar</button>
+            <button onClick={pararContagem}>STOP</button>
+        </div>
+    )
+}
