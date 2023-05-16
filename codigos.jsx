@@ -335,3 +335,7 @@ const Aula = (tempo) => {
             alert(cidade);
         }
     }
+   //forma de declarar função dentro de variável
+   var funcao = function(){
+    console.log('funcaofff');
+   }
