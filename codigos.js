@@ -339,3 +339,11 @@ const Aula = (tempo) => {
    var funcao = function(){
     console.log('funcaofff');
    }
+
+//oculta elementos do html
+function ocultarElementoHTML(){
+    var node = document.getElementById("divbotao")
+    if (node.parentNode) {
+        node.parentNode.removeChild(node)
+    }
+}
